@@ -34,7 +34,10 @@ contract('Marketplace',([deployer, seller, buyer]) => {
         before(async () => {
             result = await marketplace.createProduct('iphone X',web3.utils.toWei('1','Ether'), {from: seller})
             productCount = await marketplace.productCount()
-            //console.log('Marketplace product:', result)
+            console.log('deployer', deployer)
+            console.log('seller', seller)
+            console.log('buyer', buyer)
+
         })
 
         it('creates products',async () =>{
